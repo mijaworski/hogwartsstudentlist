@@ -1,5 +1,5 @@
 body {
-    background-color: #002fdf;
+    background-color: #E7C6C8;
 }
 
 h1,
@@ -17,13 +17,18 @@ p {
     font-family: "News Cycle", sans-serif;
 }
 
+.title {
+    text-align: center;
+    font-size: 180%;
+    padding: 2%;
+}
+
 .studentlist {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 10px;
-    margin-bottom: 10px;
+    grid-gap: 5px;
     text-align: center;
 }
 
@@ -40,6 +45,7 @@ p {
     color: #fefefe;
     border: 0.5px solid #002fdf;
     border-radius: 25px;
+    font-family: "News Cycle", sans-serif;
 }
 
 .hide {
@@ -52,7 +58,7 @@ p {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -62,4 +68,5 @@ p {
     margin: 1em;
     padding: 2em;
     color: #002fdf;
+    text-align: center;
 }
