@@ -1,11 +1,45 @@
 body {
-    background-color: #002FDF;
+    background-color: #002fdf;
 }
 
 h1,
 h3,
 p {
     color: #fefefe;
+}
+
+h1,
+h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+p {
+    font-family: "News Cycle", sans-serif;
+}
+
+.studentlist {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.person {
+    display: grid;
+    background-color: #ff8d63;
+    padding: 10fr;
+    margin: 50px;
+    border-radius: 25px;
+}
+
+.button {
+    background-color: #ff8d63;
+    color: #fefefe;
+    border: 0.5px solid #002fdf;
+    border-radius: 25px;
 }
 
 .hide {
@@ -23,9 +57,9 @@ p {
 }
 
 .modal-content {
-    background-color: #FF8D63;
+    background-color: #ff8d63;
     border: 1px solid #7c1f17;
     margin: 1em;
     padding: 2em;
-    color: #002FDF;
+    color: #002fdf;
 }
