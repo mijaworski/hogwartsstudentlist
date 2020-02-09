@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Jim+Nightshade&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=News+Cycle|Oswald:700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Class o 1991 (Hogwarts)</title>
@@ -13,10 +14,10 @@
 
 <body>
     <div class="title">
-        <h1>Class of 1991</h1>
+        <h1>Students of 1991</h1>
         <h3>Hogwarts School of Witchcraft and Wizardry</h3>
     </div>
-    <main class="studentlist">
+    <main id="studentlist" class="studentlist">
         <template>
             <article class="person">
                 <h1 class="studentname">NAME GOES HERE</h1>
@@ -25,10 +26,17 @@
         </template>
     </main>
 
-    <div class="modal-background hide">
+    <div id="modalito" class="modal-background hide">
         <div class="modal-content">
             <h3 class="modal-name">NAME</h3>
             <p class="modal-description">LONG DESCRIPTION</p>
+            Hogwarts houses: <select name="" id="houses" class="houses">
+                <option value="--">--</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+            </select>
         </div>
     </div>
 </body>

@@ -1,6 +1,8 @@
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
-    modal.classList.add("hide");
+    if (event.target == modal) {
+        modal.classList.add("hide");
+    }
 });
 
 fetch("students1991.json")
@@ -18,13 +20,33 @@ function showStudent(student) {
     copy.querySelector(".studentname").textContent = student.fullname;
 
     copy.querySelector("button").addEventListener("click", () => {
-        modal.querySelector(".modal-name").textContent =
-            "Welcome on the page which belongs to " + student.fullname;
-        modal.querySelector(".modal-description").textContent =
-            "This student was chosen to represent " + student.house + "'s house.";
+        if (student.house === "Hufflepuff") {
+            modal.classList.add("theme1")
+        } else if (student.house === "Gryffindor") {
+            modal.classList.add("theme2")
+        } else if (student.house === "Ravenclaw") {
+            modal.classList.add("theme3")
+        } else if (student.house === "Slytherin") {
+            modal.classList.add("theme4")
+        }
+
+        modal.querySelector(".modal-name").textContent = "Welcome on the page which belongs to " + student.fullname;
+        modal.querySelector(".modal-description").textContent = "This student was chosen to represent " + student.house + "'s house.";
 
         modal.classList.remove("hide");
     });
+
+    function myFunction() {
+        var selectedValue = document.getElementById("mySelect").value;
+        if (value == "Hufflepuff") {
+            modal.classList.add("theme1")
+        } else if (value == "Gryffindor") {
+            modal.classList.remove("theme1")
+            modal.classList.add("theme2")
+        }
+    }
+
+
     document.querySelector(".studentlist").appendChild(copy);
 }
 
