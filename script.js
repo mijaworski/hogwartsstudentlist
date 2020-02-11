@@ -21,13 +21,13 @@ function showStudent(student) {
 
     copy.querySelector("button").addEventListener("click", () => {
         if (student.house === "Hufflepuff") {
-            modal.classList.add("theme1")
+            modal.classList.add("theme1");
         } else if (student.house === "Gryffindor") {
-            modal.classList.add("theme2")
+            modal.classList.add("theme2");
         } else if (student.house === "Ravenclaw") {
-            modal.classList.add("theme3")
+            modal.classList.add("theme3");
         } else if (student.house === "Slytherin") {
-            modal.classList.add("theme4")
+            modal.classList.add("theme4");
         }
 
         modal.querySelector(".modal-name").textContent = "Welcome on the page which belongs to " + student.fullname;
@@ -36,18 +36,16 @@ function showStudent(student) {
         modal.classList.remove("hide");
     });
 
-    function myFunction() {
-        var selectedValue = document.getElementById("mySelect").value;
-        if (value == "Hufflepuff") {
-            modal.classList.add("theme1")
-        } else if (value == "Gryffindor") {
-            modal.classList.remove("theme1")
-            modal.classList.add("theme2")
-        }
-    }
-
+    document.querySelector("#houses").addEventListener("change", changeTheme);
 
     document.querySelector(".studentlist").appendChild(copy);
+}
+
+function changeTheme() {
+    const theme = this.value;
+    console.log(theme);
+
+    document.querySelector("#modalito").dataset.theme = theme;
 }
 
 //function showDetails(details) {

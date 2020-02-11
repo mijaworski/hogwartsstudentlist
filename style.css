@@ -98,3 +98,23 @@ p {
     margin-top: 0;
     color: var(--secondary-color);
 }
+
+[data-theme="Hufflepuff"] {
+    --primary-color: #EEE117;
+    --secondary-color: #000000;
+}
+
+[data-theme="Slytherin"] {
+    --primary-color: #aaaaaa;
+    --secondary-color: #0d6217;
+}
+
+[data-theme="Gryffindor"] {
+    --primary-color: #7f0909;
+    --secondary-color: #FFC500;
+}
+
+[data-theme="Ravenclaw"] {
+    --primary-color: #EEE117;
+    --secondary-color: #000000;
+}
